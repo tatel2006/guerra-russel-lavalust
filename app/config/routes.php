@@ -48,7 +48,7 @@ $router->get('/', 'Welcome::index');
 
 require_once APP_DIR . 'middlewares/StudentMiddleware.php';
 require_once APP_DIR . 'config/middleware.php';
-get_config($config); // merges $config['middlewares'] into the global config
+
 
 $router->get('/student', 'StudentController::index');
 $router->get('/student/profile', 'StudentController::profile')->middleware('student_access');

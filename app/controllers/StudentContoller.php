@@ -31,7 +31,8 @@ class StudentController extends Controller
 			'address'     => 'Centro 2, Gulod, Calapan City, Oriental Mindoro',
 			'contact_no'  => '09383549129',
 			'skills'      => 'PHP, MySQL, UI/UX Design',
-			'hobbies'     => ' Badminton, Playing online games especially ml',
+			'hobbies'     => '
+			 Badminton, Playing online games especially ml',
 			'description' => 'A motivated IT student who enjoys building small web applications.',
 		];
 	}
