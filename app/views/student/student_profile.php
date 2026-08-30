@@ -79,6 +79,34 @@
 		color: #d7ecec;
 		line-height: 1.5;
 	}
+	.social-links {
+		margin-top: 22px;
+		padding-top: 18px;
+		border-top: 1px solid rgba(255, 255, 255, 0.15);
+		display: flex;
+		justify-content: center;
+		gap: 14px;
+		flex-wrap: wrap;
+	}
+	.social-links a {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		color: #eaf6f6;
+		background: rgba(255, 255, 255, 0.08);
+		border: 1px solid rgba(255, 255, 255, 0.15);
+		padding: 7px 14px;
+		border-radius: 999px;
+		text-decoration: none;
+		font-size: 0.85rem;
+		font-weight: 600;
+		transition: background 0.2s ease, transform 0.2s ease;
+	}
+	.social-links a:hover {
+		background: #7fdbda;
+		color: #0f2027;
+		transform: translateY(-2px);
+	}
 </style>
 </head>
 <body>
@@ -106,6 +134,26 @@
 		</table>
 
 		<p class="desc">"<?= htmlspecialchars($student['description']) ?>"</p>
+
+		<div class="social-links">
+			<?php if (!empty($student['facebook'])): ?>
+			<a href="<?= htmlspecialchars($student['facebook']) ?>" target="_blank" rel="noopener">
+				📘 Facebook
+			</a>
+			<?php endif; ?>
+
+			<?php if (!empty($student['instagram'])): ?>
+			<a href="<?= htmlspecialchars($student['instagram']) ?>" target="_blank" rel="noopener">
+				📸 Instagram
+			</a>
+			<?php endif; ?>
+			
+			<?php if (!empty($student['github'])): ?>
+			<a href="<?= htmlspecialchars($student['github']) ?>" target="_blank" rel="noopener">
+				💻 GitHub
+			</a>
+				<?php endif; ?>
+		</div>
 	</div>
 </body>
 </html>
