@@ -52,3 +52,5 @@ require_once APP_DIR . 'config/middleware.php';
 
 $router->get('/student', 'StudentController::index');
 $router->get('/student/profile', 'StudentController::profile')->middleware('student_access');
+
+$router->get('/users', 'UsersController::all');
