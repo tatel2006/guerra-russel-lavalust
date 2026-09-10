@@ -44,5 +44,6 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 get_config([
 	'middlewares' => [
 		'student_access' => new StudentMiddleware(),
+		'auth'=> load_class('AuthMiddleware','middlewares')
 	],
 ]);
