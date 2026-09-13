@@ -15,9 +15,5 @@ class ProductModel extends Model
     protected $fillable = ['product_name', 'description', 'price', 'quantity'];
     protected $guarded = ['id'];
 
-    public function __construct()
-    {
-        parent::__construct();
-        $this->call->database();   // required so $this->db is available
-    }
+   
 }

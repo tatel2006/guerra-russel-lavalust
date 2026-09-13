@@ -5,11 +5,7 @@ class AccountModel extends Model
 {
     protected $table = 'accounts';   // o kung ano man ang table mo
 
-    public function __construct()
-    {
-        parent::__construct();
-        $this->call->database();   // <-- ITO ang kulang, idagdag
-    }
+   
 
     public function getByUsername($username)
     {
