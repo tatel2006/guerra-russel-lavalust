@@ -107,4 +107,6 @@ $autoload['models'] = array();
 |
 */
 $autoload['configs'] = array();
+
+require_once APP_DIR . 'config/middleware.php';
 ?>
